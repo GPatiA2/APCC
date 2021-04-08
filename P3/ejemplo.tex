@@ -1,0 +1,14 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{quantikz}
+\begin{document}
+\begin{quantikz}
+\lstick{q[0]} & \gate[1]{\text{$H$}} & \gate{\text{$R_Z$}(2\cdot\pi)} & \gate{\text{$R_Z$}(0\cdot\pi)} & \qw & \gate{\text{$R_Z$}(0\cdot\pi)} & \qw & \qw & \qw & \qw & \qw & \qw \\
+\lstick{q[1]} & \qw & \ctrl{-1} & \qw & \gate[1]{\text{$H$}} & \qw & \gate{\text{$R_Z$}(2\cdot\pi)} & \gate{\text{$R_Z$}(0\cdot\pi)} & \qw & \qw & \qw & \qw \\
+\lstick{q[2]} & \qw & \qw & \ctrl{-2} & \qw & \qw & \ctrl{-1} & \qw & \gate[1]{\text{$H$}} & \gate{\text{$R_Z$}(2\cdot\pi)} & \qw & \qw \\
+\lstick{q[3]} & \qw & \qw & \qw & \qw & \ctrl{-3} & \qw & \ctrl{-2} & \qw & \ctrl{-1} & \gate[1]{\text{$H$}} & \qw \\
+\lstick{c[0]} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \\
+\lstick{c[1]} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \\
+\lstick{c[2]} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \\
+\lstick{c[3]} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \\
+\end{quantikz}
+\end{document}
